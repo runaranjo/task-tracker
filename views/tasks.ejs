@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Express • TodoMVC</title>
+		
+	</head>
+	<body>
+		<section class="prompt">
+			<h3>task tracker</h3>
+			<h1>Enter new task to track</h1>
+            <form action="/tasks" method="post">
+                <section>
+                    <label for="taskNumber">Task number</label>
+                    <input id="taskNumber" name="taskNumber" type="text" autocomplete="taskNumber" required>
+                </section>
+                <section>
+                    <label for="taskParent">Parent task number</label>
+                    <input id="taskParent" name="taskParent" type="p-task-number" autocomplete="p-task-number">
+                </section>
+                <section>
+                    <label for="taskChild">Child task number</label>
+                    <input id="taskChild" name="taskChild" type="taskChild" autocomplete="taskChild">
+                </section>
+                <section>
+                    <label for="taskLink">Link url to task</label>
+                    <input id="taskLink" name="taskLink" type="taskLink" autocomplete="taskLink" required>
+                </section>
+                <section>
+                    <label for="taskDesc">Task description</label>
+                    <textarea id="taskDesc" name="taskDesc" type="taskDesc" autocomplete="taskDesc" required></textarea>
+                </section>
+                <button type="submit">Save task</button>
+            </form>
+			<hr>
+			<p class="help">Already have an account? <a href="/login">Sign in</a></p>
+		</section>
+		<footer class="info">
+			<p>Created by <a href="https://www.jaredhanson.me">me</a></p>
+			<!-- <p>Part of <a href="https://todomvc.com">TodoMVC</a></p> -->
+			<!-- <p>Authentication powered by <a href="https://www.passportjs.org">Passport</a></p> -->
+		</footer>
+	</body>
+</html>
